@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Hotel</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/1134564224.js" crossorigin="anonymous"></script>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <script src=" https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js "></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header_social">
+                <p>Follow Us: </p>
+                <ul>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-x-twitter"></i></li>
+                </ul>
+            </div>
+            <div class="header_logo"><img src="resources/LOGOHEADER.webp" alt=""></div>
+            <div class="header_phone">
+                <a href="tel:+14099875874">1 (409) 987-5874</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div id="button"><i class="fa-solid fa-bars"></i></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about-us">ABOUT US</a></li>
+                    <li><a href="#amenities">AMENITIES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#contacts">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="home" class="booking">
+        <div class="slider">
+            <swiper-container slides-per-view="1" autoplay="300" pagination="true" mousewheel="true" keyboard="true"
+                loop="true" direction="vertical">
+                <!-- i dont think its semantically proper to make them h# elements-->
+                <swiper-slide>
+                    <img src="resources/header1.jpg" alt="Slide 1">
+                    <div class="overflow">
+                        <p class="title">Your Ideal Retreat</p>
+                        <p class="subtitle">Enjoy the world of relaxation
+                            and tranquility!</p>
+                        <button>learn more</button>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="resources/header2.jpg" alt="Slide 2">
+                    <div class="overflow">
+                        <p class="title">Relax & Unwind</p>
+                        <p class="subtitle">Experience the luxurious level
+                            of our spa treatments</p>
+                        <button>learn more</button>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="resources/header3.jpg" alt="Slide 3">
+                    <div class="overflow">
+                        <p class="title">Revitalize & Relax</p>
+                        <p class="subtitle">Indulge in our top-notch
+                            spa resort</p>
+                        <button>learn more</button>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+        <div class="form">
+            <form action="/submit" method="post">
+                <h2>Book a Room</h2>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                <label for="arrival">Arrival</label>
+                <input type="date" id="arrival" name="arrival" required>
+
+                <label for="departure">Departure</label>
+                <input type="date" id="departure" name="departure" required>
+
+                <label for="adults">Adults</label>
+                <select id="adults" name="adults" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label for="children">Children</label>
+                <select id="children" name="children">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <button type="submit">Check Availability</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section id="about-us" class="about">
+        <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/Iz-FxXBwoTY?si=2O5R0auHR_v5KeUT&amp;"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="aboutus">
+            <h2>About Us</h2>
+            <p>Committed to everyone seeking energy and excitement, we offer endless possibilities to unwind and
+                reenergize.</p>
+            <div class="dates">
+                <p><span>Weekdays:</span> 8:00-20:00</p>
+                <p><span>Weekends:</span> 9:00-18:00</p>
+            </div>
+            <button id="bookNowBtn">book now</button>
+            <dialog id="bookingDialog">
+                <div class="form">
+                    <form action="/submit" method="post">
+                        <h2>Book a Room</h2>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                        <label for="arrival">Arrival</label>
+                        <input type="date" id="arrival" name="arrival" required>
+
+                        <label for="departure">Departure</label>
+                        <input type="date" id="departure" name="departure" required>
+
+                        <label for="adults">Adults</label>
+                        <select id="adults" name="adults" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+                        <label for="children">Children</label>
+                        <select id="children" name="children">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+                        <button type="submit">Check Availability</button>
+                    </form>
+                </div>
+            </dialog>
+        </div>
+    </section>
+    <!-- part 2 -->
+
+    <section id="amenities" class="amenities">
+        <h2>Key Amenities</h2>
+        <div class="amenities_container">
+            <div class="container">
+                <i class="fa-solid fa-user-clock"></i>
+                <p class="title_amenities">24-Hour Front Desk</p>
+                <p>The reception is opened 24 hours a day. Our receptionists inform our guests of all the hotel
+                    facilities and events, and
+                    ensure that everything is done to satisfy their needs during their stay.</p>
+            </div>
+            <div class="container">
+                <i class="fa-solid fa-spa"></i>
+                <p class="title_amenities">Spa Suites</p>
+                <p>Each spa suite has been designed with volcanic rocks, thatched roofs with an open air bathroom,
+                    adding a truly magical
+                    and tranquil feeling for your well-being.</p>
+            </div>
+            <div class="container">
+                <i class="fa-solid fa-taxi"></i>
+                <p class="title_amenities">Transfer Services</p>
+                <p>Enjoy a comfortable ride to our luxury Spa resort and Hotel from the airport by booking our
+                    convenient shuttle services
+                    or private limos.</p>
+            </div>
+            <div class="container">
+                <i class="fa-solid fa-utensils"></i>
+                <p class="title_amenities">A La Carte Restaurant</p>
+                <p>Our Restaurant is opened for breakfast, lunch, and dinner and specializes in gourmet cuisines from
+                    around the world,
+                    with a variety sure to please any palate.</p>
+            </div>
+        </div>
+    </section>
+    <section class="guests">
+        <h2>Guest Rooms</h2>
+        <div class="guests_container">
+            <div class="container">
+                <img src="resources/guests1.jpg" alt="">
+                <div class="overflow">
+                    <p class="title_guests">Standard Rooms</p>
+                    <p>From $75 Per Night</p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="resources/guests2.jpg" alt="">
+                <div class="overflow">
+                    <p class="title_guests">King Guest Rooms</p>
+                    <p>From $78 Per Night</p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="resources/guests3.jpg" alt="">
+                <div class="overflow">
+                    <p class="title_guests">Deluxe Suites</p>
+                    <p>From $95 Per Night</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="data">
+        <div class="data_container">
+            <div class="container">
+                <p class="number">10</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="container">
+                <p class="number">7</p>
+                <p>Spa Treatment Rooms</p>
+            </div>
+            <div class="container">
+                <p class="number">26</p>
+                <p>Face & Body Treatments</p>
+            </div>
+            <div class="container">
+                <p class="number">12</p>
+                <p>Types of Massages</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- part 3 -->
+    <section id="gallery" class="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery_container">
+            <div class="a">
+                <a href="resources/gallery1.jpg" data-fancybox="gallery">
+                    <img src="resources/gallery1.jpg" alt="">
+                </a>
+            </div>
+            <div class="b">
+                <a href="resources/gallery2.jpg" data-fancybox="gallery">
+                    <img src="resources/gallery2.jpg" alt="">
+                </a>
+            </div>
+            <div class="c">
+                <a href="resources/gallery3.jpg" data-fancybox="gallery">
+                    <img src="resources/gallery3.jpg" alt="">
+                </a>
+            </div>
+            <div class="d">
+                <a href="resources/gallery4.jpg" data-fancybox="gallery">
+                    <img src="resources/gallery4.jpg" alt="">
+                </a>
+            </div>
+            <div class="e">
+                <a href="resources/gallery5.jpg" data-fancybox="gallery">
+                    <img src="resources/gallery5.jpg" alt="">
+                </a>
+            </div>
+            <div class="f">
+                <a href="resources/gallery6.jpg" data-fancybox="gallery">
+                    <img src="resources/gallery6.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="prices_testimonial">
+        <div class="prices">
+            <h2>Prices</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Massages</button>
+                    <div class="accordion-content">
+                        <div class="card" id="massages">
+                            <h3>Hot Stone Massage $95</h3>
+                            <p>Enjoy this organic form of massage, where heated stones applied to the body stimulate the
+                                circulatory system, relax tense muscles, release toxins, and create a feeling of
+                                peacefulness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Treatments</button>
+                    <div class="accordion-content">
+                        <div class="card" id="treatments">
+                            <h3>Facial Treatments $95</h3>
+                            <p>We are proud to offer facial services that address the needs of every skin type and
+                                condition.
+                                Each treatment is not only designed to produce a radiant complexion but to create total
+                                tranquility.</p>
+                            <h3>Hydrotherapy Bath $95</h3>
+                            <p>Our unique soaking tubs are designed to relax and soothe the body with warm water, spring
+                                filters, massage jets, and color therapy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- swiper is a tricky library...-->
+        <div class="wrapper">
+            <h2>Testimonials</h2>
+            <section class="testimonials">
+                <!-- Testimonial Slider -->
+                <div class="swiper-container testimonial-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial Slide 1 -->
+                        <article class="swiper-slide">
+                            <h2>Great atmosphere and level of customer service</h2>
+                            <p>Got a Royal Villas certificate as a gift a few months ago...</p>
+                            <p><strong>SAM BROWN</strong> <em>Journalist</em></p>
+                        </article>
+                        <!-- Testimonial Slide 2 -->
+                        <article class="swiper-slide">
+                            <h2>Amazing experience and relaxing atmosphere</h2>
+                            <p>I loved the service at Royal Villas. The spa treatments were excellent...</p>
+                            <p><strong>ANNA LEE</strong> <em>Designer</em></p>
+                        </article>
+                        <!-- Testimonial Slide 3 -->
+                        <article class="swiper-slide">
+                            <h2>Perfect getaway spot</h2>
+                            <p>Highly recommended for a weekend escape. The staff was very professional...</p>
+                            <p><strong>MARK JONES</strong> <em>Photographer</em></p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Navigation Images -->
+                <div class="swiper-container testimonial-thumbnails">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="resources/testimonial1.jpg" alt="Testimonial 1"></div>
+                        <div class="swiper-slide"><img src="resources/testimonial2.jpg" alt="Testimonial 2"></div>
+                        <div class="swiper-slide"><img src="resources/testimonial3.jpg" alt="Testimonial 3"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="blog">
+        <h2>Our Blog</h2>
+        <div class="blog_container">
+            <article class="container">
+                <img src="resources/blog1.jpg" alt="">
+                <div class="content">
+                    <h3>Top 3 Reasons Why Royal Villas Offers the Best Spa Procedures</h3>
+                    <div class="date">
+                        <div class="wrapper">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <p>October 12, 2017</p>
+                        </div>
+                        <p>78 💗</p>
+                    </div>
+                </div>
+            </article>
+            <article class="container">
+                <img src="resources/blog2.jpg" alt="">
+                <div class="content">
+                    <h3>Featured Therapies and Activities at Royal Villas Spa Resort and Hotel</h3>
+                    <div class="date">
+                        <div class="wrapper">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <p>October 26, 2017</p>
+                        </div>
+                        <p>15 💗</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div id="contacts" class="googlemaps">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59599.27728332957!2d-89.60737284143809!3d20.994447690508604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56716321690167%3A0x9c93e0ca280827a4!2sHotel%20ibis%20M%C3%A9rida!5e0!3m2!1ses-419!2smx!4v1733418281719!5m2!1ses-419!2smx"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <p><strong>Weekdays:</strong> 8:00-20:00</p>
+            <p><strong>Weekends:</strong> 9:00-18:00</p>
+            <div class="footer-bottom">
+                Royal Villas © 2024. <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Address</h3>
+            <p><span>📍</span> 6036 Richmond Hwy., Alexandria, VA, 2230</p>
+            <p><span>📞</span> Call Us: +1 (409) 987-5874</p>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>Join Our Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Enter your e-mail" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            $('#button').on('click', () => {
+                $('nav').slideToggle();
+            });
+
+            // Testimonial Swiper
+            const thumbnailSwiper = new Swiper('.testimonial-thumbnails', {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                direction: 'column',
+                watchSlidesProgress: true,
+            });
+            // Anime JS
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        anime({
+                            targets: '.data_container .container',
+                            translateY: [20, -10],
+                            duration: 1500,
+                            easing: 'easeInOutSine',
+                            direction: 'alternate',
+                            delay: anime.stagger(100),
+                            loop: true
+                        });
+
+                    }
+                });
+            });
+
+            const target = document.querySelector('.data_container');
+            if (target) {
+                observer.observe(target);
+            }
+
+            // Fancybox
+            Fancybox.bind("[data-fancybox='gallery']", {
+                Toolbar: {
+                    display: ["close"],
+                },
+                Thumbs: {
+                    autoStart: true, // Enable thumbnails
+                },
+            });
+
+            // accordeon
+            $('.accordion-header').on('click', function () {
+                $(this).toggleClass('active');
+
+                $(this).next('.accordion-content').slideToggle(300);
+
+                $('.accordion-header').not(this).removeClass('active');
+                $('.accordion-content').not($(this).next('.accordion-content')).slideUp(300);
+            });
+
+            // Testimonial Swiper
+            const mainSwiper = new Swiper('.testimonial-slider', {
+                thumbs: {
+                    swiper: thumbnailSwiper
+                }
+            });
+
+            // Booking modal
+            const bookNowBtn = document.getElementById("bookNowBtn");
+            const bookingDialog = document.getElementById("bookingDialog");
+
+            bookNowBtn.addEventListener("click", function () {
+                bookingDialog.showModal();
+            });
+
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+            window.addEventListener("scroll", () => {
+                scrollToTopBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+            });
+
+            scrollToTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>
