@@ -66,7 +66,7 @@
                         <p class="title">Your Ideal Retreat</p>
                         <p class="subtitle">Enjoy the world of relaxation
                             and tranquility!</p>
-                        <button>learn more</button>
+                        <a href="#about-us">learn more</a>
                     </div>
                 </swiper-slide>
                 <swiper-slide>
@@ -75,7 +75,7 @@
                         <p class="title">Relax & Unwind</p>
                         <p class="subtitle">Experience the luxurious level
                             of our spa treatments</p>
-                        <button>learn more</button>
+                        <a href="#about-us">learn more</a>
                     </div>
                 </swiper-slide>
                 <swiper-slide>
@@ -84,7 +84,7 @@
                         <p class="title">Revitalize & Relax</p>
                         <p class="subtitle">Indulge in our top-notch
                             spa resort</p>
-                        <button>learn more</button>
+                        <a href="#about-us">learn more</a>
                     </div>
                 </swiper-slide>
             </swiper-container>
@@ -262,35 +262,39 @@
     <section id="gallery" class="gallery">
         <h2>Our Gallery</h2>
         <div class="gallery_container">
-            <div class="a">
-                <a href="resources/gallery1.jpg" data-fancybox="gallery">
-                    <img src="resources/gallery1.jpg" alt="">
-                </a>
+            <div class="left">
+                <div class="a">
+                    <a href="resources/gallery1.jpg" data-fancybox="gallery">
+                        <img src="resources/gallery1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="b">
+                    <a href="resources/gallery2.jpg" data-fancybox="gallery">
+                        <img src="resources/gallery2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="c">
+                    <a href="resources/gallery3.jpg" data-fancybox="gallery">
+                        <img src="resources/gallery3.jpg" alt="">
+                    </a>
+                </div>
             </div>
-            <div class="b">
-                <a href="resources/gallery2.jpg" data-fancybox="gallery">
-                    <img src="resources/gallery2.jpg" alt="">
-                </a>
-            </div>
-            <div class="c">
-                <a href="resources/gallery3.jpg" data-fancybox="gallery">
-                    <img src="resources/gallery3.jpg" alt="">
-                </a>
-            </div>
-            <div class="d">
-                <a href="resources/gallery4.jpg" data-fancybox="gallery">
-                    <img src="resources/gallery4.jpg" alt="">
-                </a>
-            </div>
-            <div class="e">
-                <a href="resources/gallery5.jpg" data-fancybox="gallery">
-                    <img src="resources/gallery5.jpg" alt="">
-                </a>
-            </div>
-            <div class="f">
-                <a href="resources/gallery6.jpg" data-fancybox="gallery">
-                    <img src="resources/gallery6.jpg" alt="">
-                </a>
+            <div class="right">
+                <div class="d">
+                    <a href="resources/gallery4.jpg" data-fancybox="gallery">
+                        <img src="resources/gallery4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="e">
+                    <a href="resources/gallery5.jpg" data-fancybox="gallery">
+                        <img src="resources/gallery5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="f">
+                    <a href="resources/gallery6.jpg" data-fancybox="gallery">
+                        <img src="resources/gallery6.jpg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -478,7 +482,8 @@
                     autoStart: true, // Enable thumbnails
                 },
             });
-
+            $('.accordion-header').first().addClass('active');
+            $('.accordion-content').first().slideDown(0);
             // accordeon
             $('.accordion-header').on('click', function () {
                 $(this).toggleClass('active');
