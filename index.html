@@ -20,6 +20,7 @@
     <!-- Fancybox JS -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
+    <!-- AnimeJS -->
     <script src=" https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js "></script>
 
 </head>
@@ -28,16 +29,18 @@
     <header>
         <div class="header-top">
             <div class="header_social">
-                <p>Follow Us: </p>
+                <p>Follow Us:</p>
                 <ul>
-                    <li><i class="fa-brands fa-facebook-f"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-x-twitter"></i></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
             </div>
             <div class="header_logo"><img src="resources/LOGOHEADER.webp" alt=""></div>
             <div class="header_phone">
-                <a href="tel:+14099875874">1 (409) 987-5874</a>
+                <a href="tel:+14099875874">📞 1 (409) 987-5874</a>
             </div>
         </div>
         <div class="header-bottom">
@@ -55,7 +58,7 @@
     </header>
 
 
-    <section id="home" class="booking">
+    <section id="home" class="booking animate_into_view">
         <div class="slider">
             <swiper-container slides-per-view="1" autoplay="300" pagination="true" mousewheel="true" keyboard="true"
                 loop="true" direction="vertical">
@@ -124,7 +127,7 @@
     </section>
 
 
-    <section id="about-us" class="about">
+    <section id="about-us animate_into_view" class="about">
         <div class="video">
             <iframe src="https://www.youtube-nocookie.com/embed/Iz-FxXBwoTY?si=2O5R0auHR_v5KeUT&amp;"
                 title="YouTube video player" frameborder="0"
@@ -178,7 +181,7 @@
     </section>
     <!-- part 2 -->
 
-    <section id="amenities" class="amenities">
+    <section id="amenities" class="amenities animate_into_view">
         <h2>Key Amenities</h2>
         <div class="amenities_container">
             <div class="container">
@@ -211,7 +214,7 @@
             </div>
         </div>
     </section>
-    <section class="guests">
+    <section class="guests animate_into_view">
         <h2>Guest Rooms</h2>
         <div class="guests_container">
             <div class="container">
@@ -237,7 +240,7 @@
             </div>
         </div>
     </section>
-    <section class="data">
+    <section class="data animate_into_view">
         <div class="data_container">
             <div class="container">
                 <p class="number">10</p>
@@ -259,47 +262,35 @@
     </section>
 
     <!-- part 3 -->
-    <section id="gallery" class="gallery">
+    <section id="gallery" class="gallery animate_into_view">
         <h2>Our Gallery</h2>
         <div class="gallery_container">
-            <div class="left">
-                <div class="a">
-                    <a href="resources/gallery1.jpg" data-fancybox="gallery">
-                        <img src="resources/gallery1.jpg" alt="">
-                    </a>
-                </div>
-                <div class="b">
-                    <a href="resources/gallery2.jpg" data-fancybox="gallery">
-                        <img src="resources/gallery2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="c">
-                    <a href="resources/gallery3.jpg" data-fancybox="gallery">
-                        <img src="resources/gallery3.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="right">
-                <div class="d">
-                    <a href="resources/gallery4.jpg" data-fancybox="gallery">
-                        <img src="resources/gallery4.jpg" alt="">
-                    </a>
-                </div>
-                <div class="e">
-                    <a href="resources/gallery5.jpg" data-fancybox="gallery">
-                        <img src="resources/gallery5.jpg" alt="">
-                    </a>
-                </div>
-                <div class="f">
-                    <a href="resources/gallery6.jpg" data-fancybox="gallery">
-                        <img src="resources/gallery6.jpg" alt="">
-                    </a>
-                </div>
-            </div>
+            <a href="resources/gallery1.jpg" data-fancybox="gallery">
+                <img src="resources/gallery1.jpg" alt="">
+            </a>
+            <a href="resources/gallery2.jpg" data-fancybox="gallery">
+                <img src="resources/gallery2.jpg" alt="">
+            </a>
+            <a href="resources/gallery3.jpg" data-fancybox="gallery">
+                <img src="resources/gallery3.jpg" alt="">
+            </a>
+
+            <a href="resources/gallery4.jpg" data-fancybox="gallery">
+                <img src="resources/gallery4.jpg" alt="">
+            </a>
+
+            <a href="resources/gallery5.jpg" data-fancybox="gallery">
+                <img src="resources/gallery5.jpg" alt="">
+            </a>
+
+            <a href="resources/gallery6.jpg" data-fancybox="gallery">
+                <img src="resources/gallery6.jpg" alt="">
+            </a>
+
         </div>
     </section>
 
-    <div class="prices_testimonial">
+    <div class="prices_testimonial animate_into_view">
         <div class="prices">
             <h2>Prices</h2>
             <div class="accordion">
@@ -333,7 +324,7 @@
             </div>
         </div>
         <!-- swiper is a tricky library...-->
-        <div class="wrapper">
+        <div class="wrapper animate_into_view">
             <h2>Testimonials</h2>
             <section class="testimonials">
                 <!-- Testimonial Slider -->
@@ -372,7 +363,7 @@
         </div>
     </div>
 
-    <section class="blog">
+    <section class="blog animate_into_view">
         <h2>Our Blog</h2>
         <div class="blog_container">
             <article class="container">
@@ -451,7 +442,7 @@
                 watchSlidesProgress: true,
             });
             // Anime JS
-            const observer = new IntersectionObserver((entries) => {
+            const dataObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         anime({
@@ -470,7 +461,7 @@
 
             const target = document.querySelector('.data_container');
             if (target) {
-                observer.observe(target);
+                dataObserver.observe(target);
             }
 
             // Fancybox
@@ -520,6 +511,34 @@
                 window.scrollTo({
                     top: 0,
                 });
+            });
+
+            // Animation
+            const intoViewObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const element = entry.target;
+                            anime({
+                                targets: element,
+                                opacity: [0, 1],
+                                translateY: [-50, 0],
+                                duration: 1000,
+                                easing: 'easeOutQuad',
+                            });
+
+                            intoViewObserver.unobserve(element);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                }
+            );
+
+            document.querySelectorAll('.animate_into_view').forEach((el) => {
+                el.style.opacity = 0;
+                intoViewObserver.observe(el);
             });
 
         });
